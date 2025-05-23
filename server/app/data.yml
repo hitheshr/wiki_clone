@@ -112,6 +112,7 @@ defaults:
       origin: true
     search:
       maxHits: 100
+      engine: db
     maintainerEmail: security@requarks.io
 localeNamespaces:
   - admin

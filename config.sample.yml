@@ -145,3 +145,12 @@ dataPath: ./data
 # file uploads.
 
 bodyParserLimit: 5mb
+
+# ---------------------------------------------------------------------
+# Search Engine
+# ---------------------------------------------------------------------
+# Default search engine key. Set to "rag" to enable the RAG engine.
+
+search:
+  maxHits: 100
+  engine: db

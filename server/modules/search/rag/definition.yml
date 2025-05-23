@@ -1,0 +1,19 @@
+key: rag
+title: Retrieval Augmented Search
+description: Simple RAG search engine using embeddings and a vector store.
+author: example
+logo: https://static.requarks.io/logo/search.svg
+website: https://example.com/
+isAvailable: true
+props:
+  vectorStorePath:
+    type: String
+    title: Vector Store Path
+    hint: Path where embeddings will be stored.
+    default: ''
+    order: 1
+  embeddingApiKey:
+    type: String
+    title: Embedding API Key
+    hint: API key for your embedding provider.
+    order: 2

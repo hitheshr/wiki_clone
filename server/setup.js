@@ -277,9 +277,10 @@ module.exports = () => {
       // Load renderers
       await WIKI.models.renderers.refreshRenderersFromDisk()
 
-      // Load search engines + enable default
+      // Load search engines + enable configured engine
       await WIKI.models.searchEngines.refreshSearchEnginesFromDisk()
-      await WIKI.models.searchEngines.query().patch({ isEnabled: true }).where('key', 'db')
+      const engineKey = _.get(WIKI, 'config.search.engine', 'db')
+      await WIKI.models.searchEngines.query().patch({ isEnabled: true }).where('key', engineKey)
 
       // WIKI.telemetry.sendEvent('setup', 'install-loadedmodules')
 
